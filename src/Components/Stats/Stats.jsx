@@ -17,7 +17,7 @@ const Stats = () => {
   ];
 
   return (
-    <div className="bg-linear-to-r from-violet-600 to-purple-600 py-16 ">
+    <div className="bg-linear-to-r from-violet-600 to-purple-600 py-16 mt-7">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-around items-center gap-8 md:gap-0">
           {stats.map((stat, index) => (

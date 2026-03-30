@@ -3,8 +3,17 @@ import "./App.css";
 import HeroBanner from "./Components/HeroBanner/HeroBanner";
 import Navbar from "./Components/NavBar/Navbar";
 import Stats from "./Components/Stats/Stats";
+import Cards from "./Components/cards/Cards";
+import { Suspense } from "react";
+
+//getting api data
+const cartPromise = async () => {
+  const res = await fetch("/public/cardApi.json");
+  return res.json();
+};
 
 function App() {
+  const cart = cartPromise();
   return (
     <>
       <header>
@@ -13,6 +22,13 @@ function App() {
         <HeroBanner></HeroBanner>
       </header>
       <Stats></Stats>
+      <main>
+        <Suspense
+          fallback={<span className="loading loading-bars loading-xl"></span>}
+        >
+          <Cards cart={cart}></Cards>
+        </Suspense>
+      </main>
     </>
   );
 }

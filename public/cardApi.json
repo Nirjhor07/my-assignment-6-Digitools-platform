@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "AI Writing Pro",
+    "badge": "Best Seller",
+    "price": 29,
+    "billing": "Mo",
+    "icon": "https://i.ibb.co.com/fd2Fvm3Y/writing-2327400-1.png",
+    "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+    "features": [
+      "Unlimited AI generations",
+      "50+ writing templates",
+      "SEO optimization tools"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Design Template",
+    "badge": "Popular",
+    "price": 19,
+    "billing": "Mo",
+    "icon": "https://i.ibb.co.com/m5111Lv8/design-tool.png",
+    "description": "Perfect for startups to create content, emails, and social media posts efficiently.",
+    "features": ["500 AI generations", "30+ templates", "Basic analytics"]
+  },
+  {
+    "id": 3,
+    "title": "Premium Stock Assets",
+    "badge": "New",
+    "price": 39,
+    "billing": "Mo",
+    "icon": "https://i.ibb.co.com/6cqpQkL5/operation.png",
+    "description": "Designed for creators who need advanced tools for blogs, scripts, and video content.",
+    "features": [
+      "Unlimited generations",
+      "100+ templates",
+      "Content scheduling"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Automation Toolkit",
+    "badge": "Popular",
+    "price": 49,
+    "billing": "Mo",
+    "icon": "https://i.ibb.co.com/HSwvJ8D/portfolio.png",
+    "description": "All-in-one solution for marketers to generate ads, campaigns, and email sequences.",
+    "features": [
+      "Unlimited AI generations",
+      "Ad copy generator",
+      "Email automation tools"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Resume Builder Pro",
+    "badge": "New",
+    "price": 59,
+    "billing": "Mo",
+    "icon": "https://i.ibb.co.com/0jpKFYKb/shopping-cart.png",
+    "description": "Advanced AI tools for businesses to scale content production and workflow.",
+    "features": ["Team collaboration", "Priority support", "Advanced analytics"]
+  },
+  {
+    "id": 6,
+    "title": "Social Media Content Kit",
+    "badge": "Best Seller",
+    "price": 99,
+    "billing": "Mo",
+    "icon": "https://i.ibb.co.com/fVBy8cNN/social-media.png",
+    "description": "Enterprise-grade AI solutions with custom integrations and dedicated support.",
+    "features": ["Custom AI models", "API access", "Dedicated account manager"]
+  }
+]
