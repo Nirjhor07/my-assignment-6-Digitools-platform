@@ -1,9 +1,17 @@
 import React from "react";
 import Features from "./Features";
+import { useState } from "react";
 
 const Card = ({ card }) => {
   // console.log(card.id)
-  
+
+  // card buy now to purchased useState
+  const [purchased, setPurchased] = useState(false);
+  // function for btn changes state
+  const handleBtn = () => {
+    setPurchased(!purchased);
+  };
+
   const { title, badge, price, billing, icon, description, features } = card;
   return (
     <div className="container">
@@ -14,7 +22,9 @@ const Card = ({ card }) => {
           ) : badge === "New" ? (
             <span className="badge badge-xs badge-success">{badge}</span>
           ) : (
-            <span className="badge badge-xs bg-violet-600 text-white px-3 py-2 rounded-full text-sm">{badge}</span>
+            <span className="badge badge-xs bg-violet-600 text-white px-3 py-2 rounded-full text-sm">
+              {badge}
+            </span>
           )}
           <div className="flex justify-between">
             <div className="flex justify-center items-center gap-2">
@@ -34,7 +44,12 @@ const Card = ({ card }) => {
             ))}
           </ul>
           <div className="mt-6">
-            <button className="btn btn-primary btn-block">Subscribe</button>
+            <button
+              onClick={() => handleBtn(purchased)}
+              className="btn btn-primary btn-block"
+            >
+              {purchased ? "Purchased" : "Buy Now"}
+            </button>
           </div>
         </div>
       </div>
