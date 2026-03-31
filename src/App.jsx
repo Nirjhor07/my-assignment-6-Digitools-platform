@@ -5,6 +5,7 @@ import Navbar from "./Components/NavBar/Navbar";
 import Stats from "./Components/Stats/Stats";
 import Cards from "./Components/cards/Cards";
 import { Suspense, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 //getting api data
 const cartPromise = async () => {
@@ -31,6 +32,8 @@ function App() {
           <Cards cart={cart} cardCount={cardCount} setCardCount={setCardCount}></Cards>
         </Suspense>
       </main>
+
+      <ToastContainer></ToastContainer>
     </>
   );
 }

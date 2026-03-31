@@ -42,7 +42,7 @@ const Cards = ({ cart, cardCount, setCardCount }) => {
       </div>
 
       {active ? (
-        <div className="grid grid-cols-3 mt-7 gap-7">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-7 gap-7">
           {cards.map((card) => (
             <Card
               key={card.id}
@@ -55,7 +55,7 @@ const Cards = ({ cart, cardCount, setCardCount }) => {
           ))}
         </div>
       ) : (
-        <CartItems  cartItems={cartItems} setCartItems={setCartItems} ></CartItems>
+        <CartItems  cartItems={cartItems} setCartItems={setCartItems} cardCount={cardCount} setCardCount={setCardCount} ></CartItems>
       )}
     </div>
   );

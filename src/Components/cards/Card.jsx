@@ -1,6 +1,7 @@
 import React from "react";
 import Features from "./Features";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Card = ({ card, cardCount, setCardCount, cartItems, setCartItems }) => {
   // console.log(card.id)
@@ -12,7 +13,9 @@ const Card = ({ card, cardCount, setCardCount, cartItems, setCartItems }) => {
     setPurchased(!purchased);
     setCardCount(cardCount + 1);
     setCartItems([...cartItems, card]);
+    toast(`${title} is Purchased Succesfully with ${price}$ `);
   };
+ 
 
   const { title, badge, price, billing, icon, description, features } = card;
   return (
@@ -31,7 +34,7 @@ const Card = ({ card, cardCount, setCardCount, cartItems, setCartItems }) => {
           <div className="flex justify-between">
             <div className="flex justify-center items-center gap-2">
               <div className="w-[100] h-[200] rounded-full  flex justify-center items-center">
-                <img className="w-full" src={icon}/>
+                <img className="w-full" src={icon} />
               </div>
               <h2 className="text-xl font-bold ">{title}</h2>
             </div>

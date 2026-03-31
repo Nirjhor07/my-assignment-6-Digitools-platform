@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { BsListNested } from "react-icons/bs";
 import Cart from "./Cart";
+import { toast } from "react-toastify";
 
-const CartItems = ({ cartItems, setCartItems }) => {
+const CartItems = ({ cartItems, setCartItems, cardCount, setCardCount }) => {
   // console.log(cartItems);
   // when procees btn pres empty array
   const [items, setItems] = useState([]);
@@ -13,7 +14,10 @@ const CartItems = ({ cartItems, setCartItems }) => {
       (selected) => selected.title !== item.title,
     );
     setCartItems(filteredItems);
-    // console.log(i.title);
+    setCardCount(cardCount - 1);
+    toast(`${item.title} is removed from the cart Items Succesfully!`);
+
+    // console.log(item.title);
     // console.log(filteredItems);
   };
 
