@@ -1,9 +1,21 @@
 import React from "react";
+import { BsListNested } from "react-icons/bs";
+import Cart from "./Cart";
 
-const CartItems = () => {
+const CartItems = ({ cartItems }) => {
   return (
-    <div>
-      <h1>This is my card</h1>
+    <div className="container mx-auto mt-10 bg-gray-100 p-6 rounded-2xl shadow-md">
+      <h1 className="text-2xl font-bold mb-3">Your Card</h1>
+      {cartItems.map((item, index) => (
+        <Cart key={index} item={item}></Cart>
+      ))}
+      <div className="flex justify-between text-xl font-bold px-2.5">
+        <p>Total</p>
+        <p>$90</p>
+      </div>
+      <button className="text-xl btn btn-primary btn-block mt-7">
+        Proceed to Checkout
+      </button>
     </div>
   );
 };

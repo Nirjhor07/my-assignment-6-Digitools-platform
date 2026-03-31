@@ -1,7 +1,7 @@
 import React from "react";
 
 const Features = ({ features }) => {
-  console.log(features);
+  // console.log(features);
   return (
     <div>
       <ul className="mt-6 flex flex-col gap-2 text-xs">

@@ -31,7 +31,7 @@ const Card = ({ card, cardCount, setCardCount, cartItems, setCartItems }) => {
           <div className="flex justify-between">
             <div className="flex justify-center items-center gap-2">
               <div className="w-[100] h-[200] rounded-full  flex justify-center items-center">
-                <img className="w-full" src={icon} alt="" srcset="" />
+                <img className="w-full" src={icon}/>
               </div>
               <h2 className="text-xl font-bold ">{title}</h2>
             </div>

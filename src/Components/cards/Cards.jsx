@@ -55,7 +55,7 @@ const Cards = ({ cart, cardCount, setCardCount }) => {
           ))}
         </div>
       ) : (
-        <CartItems></CartItems>
+        <CartItems cartItems={cartItems}></CartItems>
       )}
     </div>
   );
