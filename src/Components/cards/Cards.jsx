@@ -1,9 +1,15 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import Card from "./Card";
 
 const Cards = ({ cart }) => {
   const cards = use(cart);
   //   console.log(cards);
+  // set active and set btns
+  const [active, setActive] = useState(true);
+  //function for active btns
+  const handleBtn =()=>{
+    setActive(!active)
+  }
   return (
     <div className=" mt-7 md:mt-18 container mx-auto ">
       <div className="text-center">
@@ -14,8 +20,10 @@ const Cards = ({ cart }) => {
         </p>
         {/* btns products and cart */}
         <div className="mt-7">
-          <button className="btn btn-primary rounded-2xl">Products</button>
-          <button className="btn btn-ghost rounded-2xl">cart/0</button>
+          <button onClick={()=>handleBtn(false)}
+           className={`${active? 'btn btn-primary rounded-2xl':'btn btn-ghost'}`}>Products</button>
+          <button onClick={()=>handleBtn(false)}
+          className={`${active ? 'btn btn-ghost rounded-2xl':'btn btn-primary rounded-2xl'}`}>cart/0</button>
         </div>
       </div>
 

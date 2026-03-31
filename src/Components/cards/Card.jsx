@@ -3,6 +3,7 @@ import Features from "./Features";
 
 const Card = ({ card }) => {
   // console.log(card.id)
+  
   const { title, badge, price, billing, icon, description, features } = card;
   return (
     <div className="container">
