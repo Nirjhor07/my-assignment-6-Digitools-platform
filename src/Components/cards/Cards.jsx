@@ -4,7 +4,7 @@ import CartItems from "../carts/CartItems";
 
 const Cards = ({ cart, cardCount, setCardCount }) => {
   const cards = use(cart);
-  //   console.log(cards);
+    // console.log(cart);
   // set active and set btns
   const [active, setActive] = useState(true);
   //function for active btns
@@ -55,7 +55,7 @@ const Cards = ({ cart, cardCount, setCardCount }) => {
           ))}
         </div>
       ) : (
-        <CartItems cartItems={cartItems}></CartItems>
+        <CartItems card={cards} cartItems={cartItems} ></CartItems>
       )}
     </div>
   );
