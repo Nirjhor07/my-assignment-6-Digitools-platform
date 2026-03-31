@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Cart from "./Cart";
 
-const CartItems = ({ cartItems }) => {
-  // count update for cart items
-  const [cartTotalPrice, setCartTotalPrice] = useState(0);
-  
+const CartItems = ({ cartItems, setCartItems, cardCount, setCardCount }) => {
+  const cartTotalPrice = cartItems
+    ? cartItems.reduce((total, item) => total + item.price, 0)
+    : 0;
+
   return (
     <>
       <div className="max-w-xl mx-auto mt-10 bg-gray-100 p-6 rounded-2xl shadow-md">
@@ -14,8 +15,10 @@ const CartItems = ({ cartItems }) => {
             <Cart
               key={item.id}
               cart={item}
-              cartTotalPrice={cartTotalPrice}
-              setCartTotalPrice={setCartTotalPrice}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              cardCount={cardCount}
+              setCardCount={setCardCount}
             />
           ))}
         {/* Subscribe button at bottom */}

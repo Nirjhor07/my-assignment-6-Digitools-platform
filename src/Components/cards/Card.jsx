@@ -6,17 +6,12 @@ const Card = ({ card, cardCount, setCardCount, cartItems, setCartItems }) => {
   const [btnchnage, setBtnChange] = useState(false);
   // console.log(btnchnage); //false
 
-  //purchase btn state change
-  const [purchaseBtn, setPuschaseBtn] = useState("Buy Now");
-
   //function onClick for btn change
   const handleBtn = () => {
-    setBtnChange(!btnchnage);
-    setPuschaseBtn("Purchased");
+    if (cartItems.some((item) => item.id === card.id)) return;
+    setBtnChange(true);
     setCardCount(cardCount + 1);
     setCartItems([...cartItems, card]);
-    // console.log(cartItems)
-    // console.log(btnchnage);
   };
 
   // console.log(card.id)
@@ -54,7 +49,7 @@ const Card = ({ card, cardCount, setCardCount, cartItems, setCartItems }) => {
           <div className="mt-6">
             <button
               onClick={() => handleBtn()}
-              className={`${purchaseBtn === "Purchased" ? "btn btn-primary btn-block" : "btn btn-primary btn-block"}`}
+              className="btn btn-primary btn-block"
             >
               {btnchnage ? "Purchased" : "Buy Now"}
             </button>
