@@ -1,8 +1,9 @@
 import React from "react";
 
 const Cart = ({ item,removeCart }) => {
-    console.log(item);
-  const { icon, title,price } = item;
+
+    // console.log(item);
+  const { icon, title, price } = item;
   return (
     <div>
       <div className="flex items-center justify-between bg-gray-200 p-4 rounded-xl mb-3">
@@ -13,8 +14,14 @@ const Cart = ({ item,removeCart }) => {
             <p className="text-sm text-gray-500">${price}</p>
           </div>
         </div>
-        <button onClick={()=>{removeCart(item)}}
-        className="text-pink-500 text-sm">Remove</button>
+        <button
+          onClick={() => {
+            removeCart(item);
+          }}
+          className="text-pink-500 text-sm"
+        >
+          Remove
+        </button>
       </div>
     </div>
   );
