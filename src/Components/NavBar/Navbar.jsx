@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({cardCount}) => {
   return (
     <div className="navbar bg-base-100 shadow-sm container mx-auto">
       {/* left side : logo */}
@@ -51,8 +51,7 @@ const Navbar = () => {
                 />
               </svg>
               <span className="indicator-item -top-1 -right-1 text-red-800">
-                {" "}
-                8{" "}
+                {cardCount}
               </span>
             </div>
           </div>
