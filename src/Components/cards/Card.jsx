@@ -2,7 +2,7 @@ import React from "react";
 import Features from "./Features";
 import { useState } from "react";
 
-const Card = ({ card, cardCount, setCardCount }) => {
+const Card = ({ card, cardCount, setCardCount, cartItems, setCartItems }) => {
   // console.log(card.id)
 
   // card buy now to purchased useState
@@ -11,6 +11,7 @@ const Card = ({ card, cardCount, setCardCount }) => {
   const handleBtn = () => {
     setPurchased(!purchased);
     setCardCount(cardCount + 1);
+    setCartItems([...cartItems, card]);
   };
 
   const { title, badge, price, billing, icon, description, features } = card;
