@@ -13,38 +13,6 @@ A modern digital tools e-commerce platform built with React, Vite, and Tailwind 
 **Statistics Section** --- Display key metrics
 **Navigation Bar** --- Clear and easy navigation
 
-src/
-├── Components/
-│ ├── cards/ # Card display components
-│ │ ├── Card.jsx
-│ │ ├── Cards.jsx
-│ │ └── Features.jsx
-│ ├── carts/ # Shopping cart components
-│ │ ├── Cart.jsx
-│ │ └── CartItems.jsx
-│ ├── emptyCart/ # Empty cart state
-│ │ └── EmptyCard.jsx
-│ ├── footer/ # Footer component
-│ │ └── Footer.jsx
-│ ├── getStartted/ # Get started section
-│ │ ├── GetCards.jsx
-│ │ └── GetStarted.jsx
-│ ├── HeroBanner/ # Hero section
-│ │ └── HeroBanner.jsx
-│ ├── NavBar/ # Navigation
-│ │ └── Navbar.jsx
-│ ├── Stats/ # Statistics display
-│ │ └── Stats.jsx
-│ └── subcribe/ # Newsletter section
-│ └── NewsLetter.jsx
-├── assets/ # Images and icons
-├── App.jsx # Main app component
-├── App.css # App styles
-├── main.jsx # Entry point
-└── index.css # Global styles
-
-```
-
 ## Tech Stack
 
 **React** --- 19.2.4, UI library
@@ -103,4 +71,7 @@ Three-step onboarding cards with icons and descriptions.
 ## Developper
 
 **Nirjhor Akash** - github--> https://github.com/Nirjhor07
+
+```
+
 ```
