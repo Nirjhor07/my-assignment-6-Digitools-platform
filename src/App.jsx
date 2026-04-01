@@ -14,19 +14,19 @@ import ReadyToTransform from "./Components/readyto transform/ReadyToTransform";
 
 //getting api data
 const cartPromise = async () => {
-  const res = await fetch("/public/cardApi.json");
+  const res = await fetch("/cardApi.json");
   return res.json();
 };
 
 // getting getStarted Api
 const getStartedPromise = async () => {
-  const res = await fetch("/public/getStarted.json");
+  const res = await fetch("/getStarted.json");
   return res.json();
 };
 
 //get the transparent pricing Api
 const transparentPricingApiPromise = async () => {
-  const res = await fetch("/public/simplePricing.json");
+  const res = await fetch("/simplePricing.json");
   return res.json();
 };
 
