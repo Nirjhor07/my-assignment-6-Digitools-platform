@@ -1,161 +1,105 @@
-# 🎯 A-6 Digital Tools Buying Website
+# DigiTools Platform
 
-## 📅 Deadlines
-- 60 Marks: 1st April, 2026 (11:59 PM ⏱️)  
-- 50 Marks: No Deadline for 50 marks.  
-- 30 Marks: Any time after 1st April.  
+A modern digital tools e-commerce platform built with React, Vite, and Tailwind CSS. This project highlights premium digital services and features an interactive pricing system along with a user-friendly interface.
 
----
+## Features
 
----
+**Hero Banner** --- An eye-catching landing section
+**Dynamic Pricing Cards** --- Multiple pricing tiers with conditional styling
+**Feature Showcase** --- Highlight key features and benefits
+**Shopping Cart** --- Full cart functionality to add or remove items  
+**Responsive Design** ---A mobile-first approach using Tailwind CSS  
+**Newsletter Subscription** - Email signup section; dummy functionality will be added later
+**Statistics Section** --- Display key metrics
+**Navigation Bar** --- Clear and easy navigation
 
-## 🚫 Key Rules
-- Don't ask about mark distribution in the group. We don't provide it.  
-- Don't post assignment feedback after you receive it. If you face any problem or have any complaints then join a support session and discuss it.  
-- Don’t use any lorem ipsum text, rather use relevant and meaningful text content.  
-- You can change the color if you want but remember that it should not be a gobindo color.  
-- Use at least 8 git commits with meaningful messages.  
+```
+src/
+├── Components/
+│   ├── cards/           # Card display components
+│   │   ├── Card.jsx
+│   │   ├── Cards.jsx
+│   │   └── Features.jsx
+│   ├── carts/           # Shopping cart components
+│   │   ├── Cart.jsx
+│   │   └── CartItems.jsx
+│   ├── emptyCart/       # Empty cart state
+│   │   └── EmptyCard.jsx
+│   ├── footer/          # Footer component
+│   │   └── Footer.jsx
+│   ├── getStartted/     # Get started section
+│   │   ├── GetCards.jsx
+│   │   └── GetStarted.jsx
+│   ├── HeroBanner/      # Hero section
+│   │   └── HeroBanner.jsx
+│   ├── NavBar/          # Navigation
+│   │   └── Navbar.jsx
+│   ├── Stats/           # Statistics display
+│   │   └── Stats.jsx
+│   └── subcribe/        # Newsletter section
+│       └── NewsLetter.jsx
+├── assets/              # Images and icons
+├── App.jsx              # Main app component
+├── App.css              # App styles
+├── main.jsx             # Entry point
+└── index.css            # Global styles
+```
 
----
+## Tech Stack
 
-## 🧩 Features & Requirements
+**React** --- 19.2.4, UI library
+**Vite** --- build tool and dev server
+**Tailwind CSS** --- 4.2.2, utility-first CSS
+**DaisyUI** --- 5.5.19, Tailwind component library
+**React Icons** --- 5.6.0, icon library
+**React Toastify** --- 11.0.5, toast notifications
+**Lucide** --- 1.3.0, icon set
 
-### 🧭 Navbar
-- Navbar designed according to Figma  
-- Cart icon displayed (initially empty)  
+### Prerequisites
 
----
+**Node.js**
+**npm**
 
-### 🎯 Banner
-- Banner section includes:
-  - Heading  
-  - Description text  
-  - Image  
-  - Buttons  
+### Installation
 
----
+**1. Clone the repository**
+**bash-command** -- git clone https://github.com/Nirjhor07/my-assignment-6-Digitools-platform.git
+cd my-assignment-6-Digitools-platform
 
-### 📊 Stats Section
-- Stats section designed based on Figma  
+**2. Install dependencies**
+**bash-command** -- npm install or npm i
 
----
+**start development server** -- npm run dev
 
-### 🔄 Main Section & Toggling
-- Design  2 buttons at the center of the section.
-- By clicking Cart,  the cart section will be shown. By default it will show an empty message.
-- By Clicking  Product,  the Products section will be shown. 
-- By Default product section will be visible. 
+**Build Project before deployement** -- npm run build
 
+## Api data && Sources
 
----
+**Made Api data using Chat Gpt**
 
-### 📦 JSON Data
-Create 6–10 product data with:
-- id  
-- name  
-- description  
-- price  
-- period (one-time / monthly / yearly)  
-- tag ( example- popular, new, best seller) 
-- tagType ( example- popular, new, best seller) 
-- features ( array. Example:  ["100+ templates", "ATS optimization", "Export to PDF"] )   
-- icon  
+1. /public/cardApi.json - Card data
+2. /public/getStarted.json - Get started section data
+3. /public/simplePricing.json - Pricing tiers data
 
-🚩 You can take help of AI Systems for generating a JSON Data
+## Component Highlights
 
----
+### PricingCards
 
-### 🃏 Product Cards
-- Display all products in a 3-column layout  
-- Each card includes:
-  - Name  
-  - Description  
-  - Price  
-  - Period  
-  - TagType  
-  - Features  
-  - Icon  
-  - Buy Now button  
+Dynamic pricing card component with conditional styling based on featured/popular status.
 
----
+### GetCards
 
-### 🛒 Cart Functionality
-- Show selected products in cart  
-- Display total product count in navbar  
-- Cart layout: 1 column  
-- Each cart item includes:
-  - Name  
-  - Icon  
-  - Price  
-  - Remove button  
-- "Proceed to Checkout" button:
-  - Clears all cart items  
+Three-step onboarding cards with icons and descriptions.
 
----
+### Transparent Pricing Cards
 
-### 🪜 Steps Section
-- Designed according to Figma  
+Three-step onboarding cards with icons and descriptions.
 
----
+## Notes
 
-### 💰 Pricing Section
-- Designed according to Figma  
+1.  used DaisyUI for pre-built Tailwind components
+2.  design responsiveness tested on multiple breakpoints -- exmpl: sm:, md:, lg
 
----
+## Developper
 
-### 🦶 Footer
-- Footer designed based on Figma  
-
----
-
-### 📱 Responsive Design
-- Fully responsive across devices  
-- Follow standard responsive practices  
-
----
-
-# 🚀 Challenges Part 
-
-### 🔔 Use a NPM Package React-Toastify
-- Use react toastify to show all the alerts of add to cart, remove, and proceed to checkout. 
-
-
----
-
-### ❌ Implement Selected product remove functionality 
-- On Click Remove Button product will remove from cart section.
-
-- In this section the total of the selected products ( added on the carts) will show here. 
-- Proceed to checkout button will remove all the products from the cart  
-
-
-
----
-
-### 📂 GitHub Repository
-- Create Beautiful Github Readme with following description
-    - Name of your  Project
-    - A little Description
-    - Technology that you use
-    - 3 Features about your project. 
- 
-
----
-## Optional Features: 
-
-1. When you click on a product it increases the cart count in the Navbar and clears it when you click on the proceed to checkout button. 
-2. When clicking on the Buy now Button it shows an “Added to cart” message on the button. 
-
-
-## ⚙️ Technologies Used
-- React.js  
-- Tailwind CSS, DaisyUI 
-- JavaScript (ES6+)  
-- React-Toastify (NPM Package)  
-- JSON (for product data)  
-
----
-
-## 📤 What to submit:
-- GitHub Repository Link:
-- Live Site Link:
+**Nirjhor Akash** - github--> https://github.com/Nirjhor07
