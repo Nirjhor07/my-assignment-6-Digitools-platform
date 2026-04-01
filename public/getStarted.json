@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Basic Plan",
+    "description": "A starter package suitable for individuals who need essential features at an affordable price.",
+    "icon": "https://img.icons8.com/fluency/48/star.png"
+  },
+  {
+    "id": 2,
+    "title": "Standard Plan",
+    "description": "A balanced plan offering additional features and better performance for growing users or small teams.",
+    "icon": "https://img.icons8.com/fluency/48/rocket.png"
+  },
+  {
+    "id": 3,
+    "title": "Premium Plan",
+    "description": "A complete package with all advanced features, priority support, and maximum performance.",
+    "icon": "https://img.icons8.com/fluency/48/crown.png"
+  }
+]
