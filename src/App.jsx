@@ -6,10 +6,11 @@ import Stats from "./Components/Stats/Stats";
 import Cards from "./Components/cards/Cards";
 import { Suspense, useState } from "react";
 import { ToastContainer } from "react-toastify";
-import NewsLetter from "./Components/subcribe/NewsLetter";
+
 import Footer from "./Components/footer/Footer";
 import GetStarted from "./Components/getStartted/GetStarted";
 import TransparentPricing from "./Components/transparentPricing/TransparentPricing";
+import ReadyToTransform from "./Components/readyto transform/ReadyToTransform";
 
 //getting api data
 const cartPromise = async () => {
@@ -91,8 +92,7 @@ function App() {
           ></TransparentPricing>
         </Suspense>
 
-        {/* newsletter */}
-        <NewsLetter></NewsLetter>
+        <ReadyToTransform></ReadyToTransform>
       </main>
 
       <Footer></Footer>
