@@ -3,18 +3,18 @@
     "id": 1,
     "title": "Basic Plan",
     "description": "A starter package suitable for individuals who need essential features at an affordable price.",
-    "icon": "https://img.icons8.com/fluency/48/star.png"
+    "icon": "https://i.ibb.co.com/39sFHzg8/package.png"
   },
   {
     "id": 2,
     "title": "Standard Plan",
     "description": "A balanced plan offering additional features and better performance for growing users or small teams.",
-    "icon": "https://img.icons8.com/fluency/48/rocket.png"
+    "icon": "https://i.ibb.co.com/1JBr7QyN/rocket-02.png"
   },
   {
     "id": 3,
     "title": "Premium Plan",
     "description": "A complete package with all advanced features, priority support, and maximum performance.",
-    "icon": "https://img.icons8.com/fluency/48/crown.png"
+    "icon": "https://i.ibb.co.com/BVkS2ZRs/user-01.png"
   }
 ]
