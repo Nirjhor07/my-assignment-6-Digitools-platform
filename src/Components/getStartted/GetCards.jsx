@@ -13,7 +13,7 @@ const GetCards = ({ getCards }) => {
 
       <div className="card-body flex flex-col items-center text-center">
         {/* Icon Circle */}
-        <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mb-4">
+        <div className="w-16 h-16 bg-violet-200 rounded-full flex items-center justify-center mb-4">
           <img className="p-3" src={icon} />
         </div>
 
