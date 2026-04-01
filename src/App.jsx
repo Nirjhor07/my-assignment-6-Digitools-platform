@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import NewsLetter from "./Components/subcribe/NewsLetter";
 import Footer from "./Components/footer/Footer";
 import GetStarted from "./Components/getStartted/GetStarted";
+import TransparentPricing from "./Components/transparentPricing/TransparentPricing";
 
 //getting api data
 const cartPromise = async () => {
@@ -22,6 +23,12 @@ const getStartedPromise = async () => {
   return res.json();
 };
 
+//get the transparent pricing Api
+const transparentPricingApiPromise = async () => {
+  const res = await fetch("/public/simplePricing.json");
+  return res.json();
+};
+
 function App() {
   // state for cartCount
   const [cardCount, setCardCount] = useState(0);
@@ -29,6 +36,8 @@ function App() {
   const cart = cartPromise();
   //get started Api storing to variable
   const getStarted = getStartedPromise();
+  // get the transparent pricing api
+  const transparentPricingData = transparentPricingApiPromise();
   return (
     <>
       <header>
@@ -63,6 +72,23 @@ function App() {
           }
         >
           <GetStarted getStarted={getStarted}></GetStarted>
+        </Suspense>
+
+        {/* transparentPricingApi component  */}
+        <Suspense
+          fallback={
+            <>
+              <span className="loading loading-bars loading-xs"></span>
+              <span className="loading loading-bars loading-sm"></span>
+              <span className="loading loading-bars loading-md"></span>
+              <span className="loading loading-bars loading-lg"></span>
+              <span className="loading loading-bars loading-xl"></span>
+            </>
+          }
+        >
+          <TransparentPricing
+            transparentPricingData={transparentPricingData}
+          ></TransparentPricing>
         </Suspense>
 
         {/* newsletter */}
